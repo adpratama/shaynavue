@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "b6253f99-699d-4080-8ee7-a8d22d59b024",
+		"name": "Shayna-store Backend",
+		"description": "Dokumentasi API shayna-store course Laravel-Vue",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/products?id=1&limit=10&name=Uniqlo Kaos&slug=uniqlo-kaos&type=Kaos Oblong&price_from=1&price_to=100000&page=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1",
+							"description": "id product"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "name",
+							"value": "Uniqlo Kaos"
+						},
+						{
+							"key": "slug",
+							"value": "uniqlo-kaos"
+						},
+						{
+							"key": "type",
+							"value": "Kaos Oblong"
+						},
+						{
+							"key": "price_from",
+							"value": "1"
+						},
+						{
+							"key": "price_to",
+							"value": "100000"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Checkout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Faisal Rahman\",\n    \"email\": \"isal.ngasal@gmail.com\",\n    \"number\": \"085200000000\",\n    \"address\": \"Citayam\",\n    \"transaction_total\": \"100000\",\n    \"transaction_status\": \"PENDING\",\n    \"transaction_details\": [1,2]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/checkout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"checkout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transaksi",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/transactions/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"transactions",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
